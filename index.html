@@ -3,124 +3,268 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="icon" type="imagem/x-icon" href="/img/logopreto1.png" />
+    <link rel="stylesheet" href="style.css">
+    <title>Agencia JE</title>
 </head>
 
 <body>
+
     <header>
-        <h1>Dev <span>Joao</span></h1>
-        <nav>
-            <ul aria-label="Navegação primária" class="navegacao-primaria">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Porfolio</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <i class="fa-solid fa-bars"></i>
-        </nav>
+        <div class="interface" id="inicio">
+            <div class="logo">
+                <a href="#">
+                    <img src="img/1.png" alt="logo da agencia JE">
+                </a>
+            </div><!--logo-->
 
-    </header>
-    <section aria-label="seção curriculo dowload Leonardo" class="section-div">
-        <div>
-            <h2>Hi There! I'm</h2>
-            <h2 class="digitando">website developer and designer</h2>
-            <p>Desenvolvedor Front End. Comecei minha carreira profissional recentemente, estudando diariamente,
-                desde cedo sou apaixonado pela tecnologia e pela infinidade de oportunidade que ela nos concede.</p>
-            <a href="#">Dowload CV</a>
-        </div>
-        <img src="img/image.png" alt="ilustrativa imagem de uma pessoa">
-    </section>
-    <main>
-        <article aria-label="seção sobre mim" class="sobre">
-            <div class="sobre_titulo" id="about">
-                <h1>About Me</h1>
-                <p>Professional Profile - There is All About me</p>
-                <div aria-label="Seção apenas de ilustrações de botões">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <img src="img/image.png" alt="imagem de uma pessoa ilustrativa">
-            <div class="sobre_conteudo">
-                <div class="sobre_texto">
-                    <h1>I'm Dev Saber - Joao Eduardo</h1>
-                    <p>Sou um desenvolvedor web apaixonado por criar experiências digitais cativantes e funcionais. Como
-                        um iniciante entusiasmado, estou comprometido em aprender continuamente e aprimorar minhas
-                        habilidades para criar sites incríveis.
-                        <br>
-                        <br>
-                        Meu objetivo é combinar criatividade e tecnologia para desenvolver soluções web que não apenas
-                        atendam às necessidades dos clientes, mas também proporcionem uma experiência excepcional aos
-                        usuários.
-                    </p>
-                </div>
-                <div class="sobre_info">
-                    <p><i class="fa-solid fa-calendar-days"></i>Date of birth: 07 jun 2003</p>
-                    <p><i class="fa-sharp fa-solid fa-laptop-code"></i>Freelance: Available</p>
-                    <p><i class="fa-solid fa-location-dot"></i>Address: jardinopolis, Brazil</p>
-                    <p><i class="fa-sharp fa-solid fa-globe"></i>Spoken Langages: Brazil,</p>
-                    <p><i class="fa-solid fa-flag"></i>Nationality: brazil</p>
-                    <p><i class="fa-solid fa-phone-volume"></i>Phone: +55 16 99113-9460</p>
-                    <p><i class="fa-solid fa-envelope"></i>Email: joao_eduardo_costa23@hotmail.com</p>
-                </div>
-            </div>
-            </div>
-        </article>
-    </main>
-    <section class="services">
-        <div class="sobre_titulo">
-            <h1>About Me</h1>
-            <p>Professional Profile - There is All About me</p>
-            <div aria-label="Seção apenas de ilustrações de botões">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="my_services">
-            <ul aria-label="Navegação secundaria">
-                <li>
-                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
-                    <h3>Web Design</h3>
-                    <p>Seja bem-vindo ao meu serviço de web design, onde a criatividade encontra a tecnologia para
-                        criar experiências online excepcionais.</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-globe"></i>
-                    <h3>Web Developer</h3>
-                    <p>minha paixão pelo desenvolvimento web, compromisso com a excelência técnica e atendimento ao
-                        cliente excepcional fazem de nós a escolha certa para transformar suas ideias em soluções
-                        digitais bem-sucedidas. </p>
-                </li>
-            </ul>
-        </div>
-
-        <footer>
-            <div class="sobre_titulo">
-
-            </div>
-            <nav aria-label="navegação de links sociais">
-                <ul class="footer_sociais">
-                    <a href="https://instagram.com/joao.eduardo07?igshid=OGQ5ZDc2ODk2ZA=="><img src="img/instagram.jpg"alt=""></a>
-                    <a href="https://www.linkedin.com/in/jo%C3%A3o-eduardo-720598221"><img
-                            src="img/logo-linkedin-icon-2048.png" alt=""></a>
-                    <a href="https://github.com/Joaoeduardo1"><img src="img/git.jpg" alt=""></a>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
                 </ul>
             </nav>
-            <p class="footer_comercial">Todos os direitos reservados DEV JOAO &copy; - 2023</p>
-        </footer>
 
-        </footer>
-        <script src="carrinho.js"></script>
+            <div class="btn-contato">
+
+              <a href="whatsapp://send?phone=16991139460" target="_blank">
+                    <button>Contato</button>
+                </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div><!--btn-abrir-menu-->
+
+            <div class="menu-mobile">
+                
+                <div class="btn-fechar" id="menu-mobile">
+                    <i class="bi bi-x-lg"></i>
+                </div><!--btn-fechar-->
+
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Projetos</a></li>
+                        <li><a href="whatsapp://send?phone=16991139460" target="_blank">Contato</a>
+                    </ul>
+                </nav>
+
+            </div><!--menu-mobile-->
+
+            <div class="overlay-menu" id="overlay-menu"></div><!--overlay-menu-->
+        </div><!--interface-->
+    </header>
+
+    <main>
+
+        <section class="topo-do-site" id="Inicio">
+
+            <div class="interface">
+
+                <div class="flex">
+
+                    <div class="txt-do-site">
+
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+
+                        <p>Criatividade e inovação andam lado a lado. Com uma combinação unica de design impactante,
+                            funcionalidade intuitiva e otimização para resultados, estou pronto(a) para criar a presença
+                            online dos seus sonhos.</p>
+
+                        <div class="btn-contato">
+
+                            <a href="whatsapp://send?phone=16991139460" target="_blank">
+                                <button>Entre em contato</button>
+                            </a>
+
+                        </div>
+
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+
+                        <img src="img/logopreto.png" alt="">
+
+                    </div><!--img-topo-site-->
+
+                </div><!--flex-->
+
+            </div><!--interface-->
+
+        </section><!--topo-do-site-->
+
+        <section class="especialidades" id="especialidades">
+
+            <div class="interface">
+
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+
+                <div class="flex">
+
+                    <div class="especialides-box">
+                        <i class="bi bi-code-square"></i>
+                        <h3>Website</h3>
+                        <p>Atuo como desenvolvedor front-end em um site, sendo responsável por criar uma interface
+                            atraente, garantir a responsividade, otimizar o desempenho e colaborar na integração visual
+                            com outros aspectos do site.
+                        </p>
+                    </div><!--especialides-box-->
+
+                    <div class="especialides-box">
+                        <i class="bi bi-cart"></i>
+                        <h3>Loja online</h3>
+                        <p> Sou desenvolvedor front-end responsável por criar a interface do usuário de uma loja online,
+                            garantindo designs atraentes, responsividade, otimização de desempenho e colaboração.</p>
+                    </div><!--especialides-box-->
+
+                    <div class="especialides-box">
+                        <i class="bi bi-wordpress"></i>
+                        <h3>Blog</h3>
+                        <p>Atuo como desenvolvedor front-end em uma área relacionada à hospedagem, possivelmente criando
+                            interfaces para usuários gerenciarem suas contas e interagirem com serviços de hospedagem.
+                        </p>
+                    </div><!--especialides-box-->
+
+                </div><!--flex-->
+
+            </div><!--interface-->
+
+        </section><!--especialidades-->
+
+        <section class="sobre" id="sobre">
+
+            <div class="interface">
+
+                <div class="flex">
+
+                    <div class="img-sobre">
+                        <img src="img/IMG_0459.JPG" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+
+                        <h2>MUITO PRAZER, <span>SOU JOAO EDUARDO</span></h2>
+
+                        <p>Como Desenvolvedor Front-End, terei a responsabilidade de criar interfaces de usuário
+                            atraentes e funcionais, convertendo conceitos de design em código sólido e interativo. Minha
+                            expertise em HTML, CSS e JavaScript será crucial para desenvolver experiências de usuário
+                            intuitivas e responsivas. Além disso, colaborarei de forma próxima com designers e outros
+                            membros da equipe de desenvolvimento para implementar e aprimorar recursos visuais.
+                        </p>
+
+                        <p>Front-end refere-se à parte de um sistema ou aplicativo que os usuários interagem
+                            diretamente. É a interface com a qual os usuários interagem, compreendendo a apresentação, a
+                            interação e a experiência do usuário. Um desenvolvedor front-end é responsável por criar
+                            essa interface e garantir que seja amigável, responsiva e eficiente.</p>
+
+                        <div class="btn-social">
+                            <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="#"><button><i class="bi bi-github"></i></button></a>
+                        </div>
+                    </div><!--txt-sobre-->
+
+                </div><!--flex-->
+
+            </div><!--interface-->
+
+        </section><!--Sobre-->
+
+        <section class="portfolio" id="portfolio">
+
+            <div class="interface">
+
+                <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
+
+                <div class="flex">
+
+                    <div class="img-port" style="background-image: url(img/roqudrinks.png);">
+                        <div class="overlay">Projeto1</div>
+                    </div>
+
+                    <div class="img-port" style="background-image: url(img/gisele.png);">
+                        <div class="overlay">Projeto2</div>
+                    </div>
+
+                    <div class="img-port" style="background-image: url(img/gisele1.png);">
+                        <div class="overlay">Projeto3</div>
+                    </div>
+
+                </div><!--flex-->
+
+            </div><!--interface-->
+
+        </section><!--portfolio-->
+
+        <section class="formulario">
+
+            <div class="interface">
+
+                <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+
+                <form>
+
+                    <input type="text" id="nome" placeholder="Seu nome completo:" required>
+
+                    <input type="email" id="email" placeholder="Seu e-mail:">
+
+                    <input type="tel" id="celular" placeholder="Seu celular:" required>
+
+                    <textarea id="mensagem" placeholder="Sua mensagem:" required></textarea>
+
+                    <div class="btn-enviar">
+                    <input type="button" value="ENVIAR" onclick="validarFormulario()">
+                    </div><!--btn-enviar-->
+
+                </form>
+
+            </div><!--interface-->
+
+        </section><!--formulario-->
+
+    </main>
+
+    <footer>
+
+        <div class="interface">
+
+            <div class="line-footer">
+
+               <div class="flex">
+
+                    <div class="logo-footer">
+                        <img src="img/logopreto1.png" alt="">
+                    </div><!--logo-footer-->
+
+                    <div class="btn-social">
+                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="#"><button><i class="bi bi-github"></i></button></a>
+                    </div><!--btn-social-->
+
+               </div><!--flex-->
+
+            </div><!--line-footer-->
+
+            <div class="line-footer borda">
+
+                <p><i class="bi bi-envelope-fill"></i><a href="mailto:joao_eduardo_costa23@hotmail.com"> joao_eduardo_costa23@hotmail.com</a></p>
+
+            </div><!--line-footer-->
+
+        </div><!--interface-->
+
+    </footer>
+
+    <script src="index.js" defer></script>
+
 </body>
 
 </html>
