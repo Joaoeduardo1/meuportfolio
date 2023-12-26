@@ -1,157 +1,52 @@
-function escrevendoLetra(){
-    function ativaLetra(elemento){
-        const arrTexto = elemento.innerHTML.split('');
-        elemento.innerHTML  = '';
-        arrTexto.forEach((letra, i)=>{
-            setTimeout(()=>{
-                elemento.innerHTML += letra; 
-            }, 75 * i);
-        });
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtém referências aos elementos do DOM
+    var btnAbrirMenu = document.getElementById('btn-menu');
+    var btnFecharMenu = document.getElementById('menu-mobile');
+    var menuMobile = document.querySelector('.menu-mobile');
+    var overlayMenu = document.querySelector('.overlay-menu');
 
-    const titulo = document.querySelector('.digitando');
-    ativaLetra(titulo);
-} 
-
-function ativacaoMenu(){
-    const ativaMenu = document.querySelector('.fa-bars');
-    const navMenu = document.querySelector('header .navegacao-primaria')
-
-
-    ativaMenu.addEventListener('click', ()=>{
-        ativaMenu.classList.toggle('fa-x')
-        navMenu.classList.toggle('ativado')
-    })
-}
-
-ativacaoMenu()
-
-function sobreMim(){
-    const experiencia = document.querySelectorAll('.experience_content div');
-    const botao = document.querySelectorAll('.experience_content ul li')
-    const education = document.querySelectorAll('.education_content div');
-    const botaoEducation = document.querySelectorAll('.education_content ul li')
-
-
-    experiencia[0].classList.add('ativo')
-    botao[0].classList.add('ativo')
-    education[0].classList.add('ativo')
-    botaoEducation[0].classList.add('ativo')
-
-    function slideShow(index){
-        experiencia.forEach((divisao)=>{
-            divisao.classList.remove('ativo');
-        });
-        botao.forEach((item)=>{
-            item.classList.remove('ativo')
-        });
-        experiencia[index].classList.add('ativo')
-        botao[index].classList.add('ativo')
-    }
-
-    function slideShow2(index){
-        education.forEach((divisao)=>{
-            divisao.classList.remove('ativo');
-        });
-        botaoEducation.forEach((item)=>{
-            item.classList.remove('ativo')
-        });
-        education[index].classList.add('ativo')
-        botaoEducation[index].classList.add('ativo')
-    }
-
-
-    botao.forEach((event,index)=>{
-        event.addEventListener('click', ()=>{
-            slideShow(index)
-        });
+    // Adiciona um ouvinte de evento para o botão de abrir menu
+    btnAbrirMenu.addEventListener('click', function () {
+        menuMobile.classList.add('abrir-menu');
+        overlayMenu.style.display = 'block';
     });
 
-    botaoEducation.forEach((div, index)=>{
-        div.addEventListener('click', ()=>{
-            slideShow2(index)
-        })
-    })
-}
-sobreMim();
-
-
-
-
-const listaALL = document.querySelectorAll('.projects_armazenamento ul li');
-const buttonGeral = document.querySelectorAll('.project_navegacao li');
-const buttonALL = document.querySelector('.project_models .all');
-
-listaALL.forEach((item)=>{
-    item.classList.add('ativo');
-})
-
-function removeClick(index){
-    buttonGeral.forEach((item)=>{
-        item.classList.remove('ativo');
-    })
-    buttonGeral[index].classList.add('ativo')
-}
-
-buttonGeral.forEach((event,index)=>{
-    event.addEventListener('click', ()=>{
-        removeClick(index)
-    })
-})
-
-function showLista(lista, buttom = "all"){
-    lista.forEach((item)=>{
-        item.classList.remove('ativo');
+    // Adiciona um ouvinte de evento para o botão de fechar menu
+    btnFecharMenu.addEventListener('click', function () {
+        menuMobile.classList.remove('abrir-menu');
+        overlayMenu.style.display = 'none';
     });
 
-    if(buttom == 'design'){
-        lista[0].classList.add('ativo')
-        lista[1].classList.add('ativo')
-    }
-    if(buttom == 'graphic'){
-        lista[2].classList.add('ativo');
-        lista[3].classList.add('ativo');
-    }
-
-    if(buttom == 'website'){
-        lista[4].classList.add('ativo');
-        lista[5].classList.add('ativo');
-        lista[6].classList.add('ativo');
-        lista[7].classList.add('ativo');
-    }
-
-    if(buttom == 'all'){
-        lista[0].classList.add('ativo')
-        lista[1].classList.add('ativo')
-        lista[2].classList.add('ativo');
-        lista[3].classList.add('ativo');
-        lista[4].classList.add('ativo');
-        lista[5].classList.add('ativo');
-        lista[6].classList.add('ativo');
-        lista[7].classList.add('ativo');
-    }
-}
-
-buttonGeral.forEach((item)=>{
-    item.addEventListener('click', (e)=>{
-        let currentButton = e.target;
-        if(currentButton.classList.contains('all')){
-            showLista(listaALL);
-        } if(currentButton.classList.contains('design')){
-            showLista(listaALL, "design")
-        }
-
-        if(currentButton.classList.contains('graphic')){
-            showLista(listaALL, "graphic")
-        }
-
-        if(currentButton.classList.contains('website')){
-            showLista(listaALL, "website")
-        }
-
-        if(currentButton.classList.contains('all')){
-            showLista(listaALL, "all")
-        }
+    // Adiciona um ouvinte de evento para fechar o menu ao clicar no overlay
+    overlayMenu.addEventListener('click', function () {
+        menuMobile.classList.remove('abrir-menu');
+        overlayMenu.style.display = 'none';
     });
 });
 
+function validarFormulario() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var celular = document.getElementById('celular').value;
+    var mensagem = document.getElementById('mensagem').value;
+
+    // Verificar se todos os campos estão preenchidos
+    if (nome && celular && mensagem) {
+      // Se todos os campos estão preenchidos, chama a função enviarParaWhatsApp
+      enviarParaWhatsApp();
+    } else {
+      alert('Por favor, preencha todos os campos antes de enviar.');
+    }
+  }
+
+  function enviarParaWhatsApp() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var celular = document.getElementById('celular').value;
+    var mensagem = document.getElementById('mensagem').value;
+
+    var whatsappLink = 'https://api.whatsapp.com/send?phone=16991139460&text=' +
+      encodeURIComponent('Nome: ' + nome + '\nE-mail: ' + email + '\nCelular: ' + celular + '\nMensagem: ' + mensagem);
+
+    window.open(whatsappLink);
+  }
