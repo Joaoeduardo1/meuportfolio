@@ -417,7 +417,7 @@ footer .line-footer p a{
     color: #fff;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 768px) {
 
     /* CLASSES GERAIS */
     .flex{
