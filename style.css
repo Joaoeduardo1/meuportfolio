@@ -269,6 +269,8 @@ section.sobre .flex{
 }
 
 .sobre .img-sobre img{
+    width: 500px;
+    height: auto;
     border-radius: 20px;
 }
 
